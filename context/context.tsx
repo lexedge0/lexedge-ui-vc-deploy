@@ -104,10 +104,6 @@ export const ChatbotUIContext = createContext<ChatbotUIContext>({
   workspaces: [],
   setWorkspaces: () => {},
 
-  // MODELS STORE
-  envKeyMap: {},
-  setEnvKeyMap: () => {},
-
   // WORKSPACE STORE
   selectedWorkspace: null,
   setSelectedWorkspace: () => {},

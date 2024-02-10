@@ -89,10 +89,7 @@ export const ProfileSettings: FC<ProfileSettingsProps> = ({}) => {
       username,
       profile_context: profileInstructions,
       image_url: profileImageUrl,
-      image_path: profileImagePath,
-      openai_api_key: openaiAPIKey,
-      openai_organization_id: openaiOrgID,
-      anthropic_api_key: anthropicAPIKey
+      image_path: profileImagePath
     })
 
     setProfile(updatedProfile)

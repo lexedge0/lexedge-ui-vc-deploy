@@ -17,8 +17,7 @@ interface ChatItemProps {
 }
 
 export const ChatItem: FC<ChatItemProps> = ({ chat }) => {
-  const { selectedWorkspace, selectedChat, availableOpenRouterModels } =
-    useContext(ChatbotUIContext)
+  const { selectedWorkspace, selectedChat } = useContext(ChatbotUIContext)
 
   const router = useRouter()
   const params = useParams()

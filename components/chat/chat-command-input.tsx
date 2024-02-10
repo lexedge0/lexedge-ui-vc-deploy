@@ -9,7 +9,6 @@ export const ChatCommandInput: FC<ChatCommandInputProps> = ({}) => {
   const {
     newMessageFiles,
     chatFiles,
-    slashCommand,
     isAtPickerOpen,
     setIsAtPickerOpen,
     atCommand,

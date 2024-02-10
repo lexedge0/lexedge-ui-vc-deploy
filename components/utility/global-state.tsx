@@ -16,7 +16,8 @@ import {
   LLM,
   MessageImage,
   OpenRouterLLM,
-  WorkspaceImage
+  WorkspaceImage,
+  LLMID
 } from "@/types"
 import { VALID_ENV_KEYS } from "@/types/valid-keys"
 import { useRouter } from "next/navigation"
@@ -54,14 +55,15 @@ export const GlobalState: FC<GlobalStateProps> = ({ children }) => {
   const [userInput, setUserInput] = useState<string>("")
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([])
   const [chatSettings, setChatSettings] = useState<ChatSettings>({
-    model: process.env.LLM_TO_USE || "claude-2.1",
+    model: (process.env.LLM_TO_USE || "claude-2.1") as LLMID,
     prompt: process.env.SYSTEM_PROMPT || "You are a helpful AI assistant.",
     temperature: parseFloat(process.env.DEFAULT_TEMPERATURE || "0.5"),
     contextLength: parseInt(process.env.DEFAULT_CONTEXT_LENGTH || "4000", 10),
     includeProfileContext: process.env.INCLUDE_PROFILE_CONTEXT === "true",
     includeWorkspaceInstructions:
       process.env.INCLUDE_WORKSPACE_INSTRUCTIONS === "true",
-    embeddingsProvider: process.env.EMBEDDINGS_PROVIDER || "openai"
+    embeddingsProvider:
+      (process.env.EMBEDDINGS_PROVIDER as "openai" | "local") || "openai"
   })
   const [selectedChat, setSelectedChat] = useState<Tables<"chats"> | null>(null)
   const [chatFileItems, setChatFileItems] = useState<Tables<"file_items">[]>([])
