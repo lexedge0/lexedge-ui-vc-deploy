@@ -20,7 +20,7 @@ export default function HomePage() {
       <div className="mt-2 text-4xl font-bold">LexEdge AI</div>
 
       <Link
-        className="mt-4 flex w-[200px] items-center justify-center rounded-md bg-blue-500 p-2 font-semibold text-white"
+        className="mt-4 flex w-[200px] items-center justify-center rounded-md bg-blue-700 p-2 font-semibold text-white"
         href="/login"
       >
         Get Started
