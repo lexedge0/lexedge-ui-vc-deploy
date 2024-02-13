@@ -35,20 +35,11 @@ export const ChatHelp: FC<ChatHelpProps> = ({}) => {
           <div className="flex space-x-2">
             <Link
               className="cursor-pointer hover:opacity-50"
-              href="https://twitter.com/ChatbotUI"
+              href="https://twitter.com/MirAliZain"
               target="_blank"
               rel="noopener noreferrer"
             >
               <IconBrandX />
-            </Link>
-
-            <Link
-              className="cursor-pointer hover:opacity-50"
-              href="https://github.com/mckaywrigley/chatbot-ui"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <IconBrandGithub />
             </Link>
           </div>
 
@@ -68,7 +59,7 @@ export const ChatHelp: FC<ChatHelpProps> = ({}) => {
 
         <DropdownMenuSeparator />
 
-        <DropdownMenuItem className="flex justify-between">
+        <DropdownMenuItem className="flex justify-between ">
           <div>Show Help</div>
           <div className="flex opacity-60">
             <div className="min-w-[30px] rounded border-[1px] p-1 text-center">
