@@ -16,7 +16,7 @@ export const Brand: FC<BrandProps> = ({ theme = "dark" }) => {
       target="_blank"
       rel="noopener noreferrer"
     >
-      <div className="mb-2">
+      <div className="mb-3">
         <ChatbotUISVG theme={theme === "dark" ? "dark" : "light"} scale={0.3} />
       </div>
 
