@@ -44,8 +44,7 @@ export const ChatSettings: FC<ChatSettingsProps> = ({}) => {
 
   const fullModel = LLM_LIST.find(llm => llm.modelId === chatSettings.model)
 
-  return null
-  /*
+  return (
     <Popover>
       <PopoverTrigger>
         <Button
@@ -71,5 +70,5 @@ export const ChatSettings: FC<ChatSettingsProps> = ({}) => {
         />
       </PopoverContent>
     </Popover>
-    */
+  )
 }
