@@ -20,7 +20,7 @@ export const Brand: FC<BrandProps> = ({ theme = "dark" }) => {
         <ChatbotUISVG theme={theme === "dark" ? "dark" : "light"} scale={0.3} />
       </div>
 
-      <div className="px-2 text-3xl font-bold tracking-wider">LEXEDGE</div>
+      <div className="px-2 text-3xl font-semibold tracking-wider">LEXEDGE</div>
     </Link>
   )
 }
