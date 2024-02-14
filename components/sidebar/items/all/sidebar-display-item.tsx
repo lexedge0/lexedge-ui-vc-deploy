@@ -75,7 +75,7 @@ export const SidebarItem: FC<SidebarItemProps> = ({
       >
         {icon}
 
-        <div className="ml-3 flex-1 truncate text-sm font-semibold">
+        <div className="ml-3 flex-1 truncate text-sm font-normal">
           {item.name}
         </div>
 
