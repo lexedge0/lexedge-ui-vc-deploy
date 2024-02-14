@@ -100,8 +100,7 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
 
   const IconComponent = selectedWorkspace?.is_home ? IconHome : IconBuilding
 
-  return null
-  /*
+  return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger
         className="border-input flex h-[36px]
@@ -226,5 +225,5 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
         </div>
       </PopoverContent>
     </Popover>
-  */
+  )
 }
