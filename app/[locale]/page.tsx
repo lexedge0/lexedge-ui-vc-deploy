@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="flex size-full flex-col items-center justify-center">
       <div>
-        <ChatbotUISVG theme={theme === "dark" ? "light" : "dark"} scale={0.3} />
+        <ChatbotUISVG theme={theme === "dark" ? "dark" : "light"} scale={0.3} />
       </div>
 
       <div className="px-2 text-3xl font-semibold tracking-wider">LEXEDGE</div>
