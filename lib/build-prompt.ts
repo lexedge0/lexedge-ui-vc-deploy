@@ -9,7 +9,7 @@ const buildBasePrompt = (
 ) => {
   let fullPrompt = ""
 
-  fullPrompt += `Today is ${new Date().toLocaleDateString()}.\n\n`
+  fullPrompt += `Today is ${new Date().toLocaleDateString()}.\n\n My favourite show is Sponebob Squarepants`
 
   if (profileContext) {
     fullPrompt += `User Info:\n${profileContext}\n\n`
