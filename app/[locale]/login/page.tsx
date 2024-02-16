@@ -128,7 +128,7 @@ export default async function Login({
       password,
       options: {
         // USE IF YOU WANT TO SEND EMAIL VERIFICATION, ALSO CHANGE TOML FILE
-        emailRedirectTo: `${origin}/auth/callback`
+        // emailRedirectTo: `${origin}/auth/callback`
       }
     })
 
@@ -137,16 +137,18 @@ export default async function Login({
       return redirect(`/login?message=${error.message}`)
     }
 
-    // return redirect("/setup")
+    return redirect("/setup")
 
     // USE IF YOU WANT TO SEND EMAIL VERIFICATION, ALSO CHANGE TOML FILE
-    return redirect("/login?message=Check email to continue sign in process")
+    // return redirect("/login?message=Check email to continue sign in process")
   }
 
   const handleResetPassword = async (formData: FormData) => {
     "use server"
 
-    const origin = headers().get("origin")
+    // const origin = headers().get("origin")
+    const origin = "https://chat.lexedge.co"
+
     const email = formData.get("email") as string
     const cookieStore = cookies()
     const supabase = createClient(cookieStore)
