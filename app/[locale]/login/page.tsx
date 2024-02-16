@@ -128,7 +128,7 @@ export default async function Login({
       password,
       options: {
         // USE IF YOU WANT TO SEND EMAIL VERIFICATION, ALSO CHANGE TOML FILE
-        emailRedirectTo: `https://chat.lexedge.co/`
+        emailRedirectTo: `https://chat.lexedge.co/setup`
       }
     })
 
@@ -146,8 +146,8 @@ export default async function Login({
   const handleResetPassword = async (formData: FormData) => {
     "use server"
 
-    // const origin = headers().get("origin")
-    const origin = "https://chat.lexedge.co"
+    const origin = headers().get("origin")
+    // const origin = "https://chat.lexedge.co"
 
     const email = formData.get("email") as string
     const cookieStore = cookies()
