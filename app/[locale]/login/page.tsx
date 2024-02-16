@@ -128,7 +128,7 @@ export default async function Login({
       password,
       options: {
         // USE IF YOU WANT TO SEND EMAIL VERIFICATION, ALSO CHANGE TOML FILE
-        emailRedirectTo: `https://chat.lexedge.co/auth/callback`
+        emailRedirectTo: `https://chat.lexedge.co/`
       }
     })
 
