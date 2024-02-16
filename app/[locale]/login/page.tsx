@@ -128,7 +128,7 @@ export default async function Login({
       password,
       options: {
         // USE IF YOU WANT TO SEND EMAIL VERIFICATION, ALSO CHANGE TOML FILE
-        emailRedirectTo: `https://chat.lexedge.co/`
+        // emailRedirectTo: `https://chat.lexedge.co/`
       }
     })
 
@@ -137,10 +137,10 @@ export default async function Login({
       return redirect(`/login?message=${error.message}`)
     }
 
-    return redirect("/setup")
+    // return redirect("/setup")
 
     // USE IF YOU WANT TO SEND EMAIL VERIFICATION, ALSO CHANGE TOML FILE
-    // return redirect("/login?message=Check email to continue sign in process")
+    return redirect("/login?message=Check email to continue sign in process")
   }
 
   const handleResetPassword = async (formData: FormData) => {
