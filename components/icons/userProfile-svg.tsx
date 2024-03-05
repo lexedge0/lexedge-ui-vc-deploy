@@ -6,7 +6,7 @@ interface OpenAISVGProps {
   className?: string
 }
 
-export const OpenAISVG: FC<OpenAISVGProps> = ({
+export const UserProfileSVG: FC<OpenAISVGProps> = ({
   height = 40,
   width = 40,
   className
@@ -21,7 +21,7 @@ export const OpenAISVG: FC<OpenAISVGProps> = ({
     >
       <path
         d="M50 0C77.6142 0 100 22.3858 100 50C100 77.6142 77.6142 100 50 100C22.3858 100 0 77.6142 0 50C0 22.3858 22.3858 0 50 0Z"
-        fill="#f19a37"
+        fill="#3478f6"
       />
     </svg>
   )

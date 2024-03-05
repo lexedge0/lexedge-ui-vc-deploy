@@ -173,10 +173,10 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
                         alt={workspace.name}
                       />
                     ) : (
-                      <IconHome className="mr-3" size={28} />
+                      <IconHome className="mr-3" size={20} />
                     )}
 
-                    <div className="text-lg font-semibold">
+                    <div className="font-regular text-base">
                       {workspace.name}
                     </div>
                   </Button>
@@ -212,10 +212,10 @@ export const WorkspaceSwitcher: FC<WorkspaceSwitcherProps> = ({}) => {
                         alt={workspace.name}
                       />
                     ) : (
-                      <IconBuilding className="mr-3" size={28} />
+                      <IconBuilding className="mr-3" size={20} />
                     )}
 
-                    <div className="text-lg font-semibold">
+                    <div className="font-regular text-base">
                       {workspace.name}
                     </div>
                   </Button>

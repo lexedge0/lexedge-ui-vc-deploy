@@ -58,16 +58,10 @@ export const ChatItem: FC<ChatItemProps> = ({ chat }) => {
           size={30}
         />
       ) : (
-        <WithTooltip
-          delayDuration={200}
-          display={<div>{MODEL_DATA?.modelName}</div>}
-          trigger={
-            <ModelIcon provider={MODEL_DATA?.provider} height={30} width={30} />
-          }
-        />
+        <ModelIcon provider={MODEL_DATA?.provider} height={30} width={30} />
       )}
 
-      <div className="ml-3 flex-1 truncate text-sm font-semibold">
+      <div className="font-regular ml-3 flex-1 truncate text-sm">
         {chat.name}
       </div>
 

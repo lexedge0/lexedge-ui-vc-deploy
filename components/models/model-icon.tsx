@@ -9,6 +9,7 @@ import { FC, HTMLAttributes } from "react"
 import { AnthropicSVG } from "../icons/anthropic-svg"
 import { GoogleSVG } from "../icons/google-svg"
 import { OpenAISVG } from "../icons/openai-svg"
+import { UserProfileSVG } from "../icons/userProfile-svg"
 
 interface ModelIconProps extends HTMLAttributes<HTMLDivElement> {
   provider: ModelProvider
@@ -88,6 +89,6 @@ export const ModelIcon: FC<ModelIconProps> = ({
         />
       )
     default:
-      return <IconSparkles size={width} />
+      return <UserProfileSVG />
   }
 }

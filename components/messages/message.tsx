@@ -25,6 +25,7 @@ import { TextareaAutosize } from "../ui/textarea-autosize"
 import { WithTooltip } from "../ui/with-tooltip"
 import { MessageActions } from "./message-actions"
 import { MessageMarkdown } from "./message-markdown"
+import { UserProfileSVG } from "../icons/userProfile-svg"
 
 const ICON_SIZE = 28
 
@@ -162,32 +163,18 @@ export const Message: FC<MessageProps> = ({
           ) : (
             <div className="flex items-center space-x-3">
               {message.role === "assistant" ? (
-                <WithTooltip
-                  display={<div>{MODEL_DATA?.modelName}</div>}
-                  trigger={
-                    <ModelIcon
-                      provider={modelDetails?.provider || "custom"}
-                      height={ICON_SIZE}
-                      width={ICON_SIZE}
-                    />
-                  }
+                <ModelIcon
+                  provider={modelDetails?.provider || "custom"}
+                  height={ICON_SIZE}
+                  width={ICON_SIZE}
                 />
               ) : profile?.image_url ? (
-                <Image
-                  className={`size-[28px] rounded`}
-                  src={profile?.image_url}
-                  height={28}
-                  width={28}
-                  alt="user image"
-                />
+                <UserProfileSVG />
               ) : (
-                <IconMoodSmile
-                  className="bg-primary text-secondary border-primary rounded border-[1px] p-1"
-                  size={ICON_SIZE}
-                />
+                <UserProfileSVG />
               )}
 
-              <div className="font-semibold">
+              <div className="text-sm font-medium uppercase text-gray-500">
                 {message.role === "assistant"
                   ? MODEL_DATA?.modelName
                   : profile?.display_name ?? profile?.username}
@@ -212,7 +199,7 @@ export const Message: FC<MessageProps> = ({
         </div>
 
         {fileItems.length > 0 && (
-          <div className="mt-6 text-lg font-bold">
+          <div className="mt-6 font-semibold">
             {!viewSources ? (
               <div
                 className="flex cursor-pointer items-center hover:opacity-50"
@@ -239,29 +226,16 @@ export const Message: FC<MessageProps> = ({
                     return (
                       <div
                         key={index}
-                        className="border-primary flex cursor-pointer items-center space-x-4 rounded-xl border px-4 py-3 hover:opacity-50"
+                        className="flex cursor-pointer items-center space-x-4 rounded-xl border bg-white px-4 py-3 hover:border-slate-400"
                         onClick={() => {
                           setSelectedFileItem(fileItem)
                           setShowFileItemPreview(true)
                         }}
                       >
-                        <div className="rounded bg-blue-500 p-2">
-                          {(() => {
-                            let fileExtension = parentFile?.type.includes("/")
-                              ? parentFile.type.split("/")[1]
-                              : parentFile?.type
-
-                            switch (fileExtension) {
-                              case "pdf":
-                                return <IconFileTypePdf />
-                              default:
-                                return <IconFileFilled />
-                            }
-                          })()}
-                        </div>
-
                         <div className="w-fit space-y-1 truncate text-wrap text-xs">
-                          <div className="truncate">{parentFile?.name}</div>
+                          <div className="truncate text-slate-700	">
+                            {parentFile?.name}
+                          </div>
 
                           <div className="truncate text-xs opacity-50">
                             {fileItem.content.substring(0, 60)}...

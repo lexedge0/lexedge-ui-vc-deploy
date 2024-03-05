@@ -41,7 +41,7 @@ export const CollectionItem: FC<CollectionItemProps> = ({ collection }) => {
       item={collection}
       isTyping={isTyping}
       contentType="collections"
-      icon={<IconBooks size={30} />}
+      icon={<IconBooks size={20} />} //collection icon item size
       updateState={{
         name,
         description
